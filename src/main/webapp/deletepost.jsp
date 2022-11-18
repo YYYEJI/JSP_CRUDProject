@@ -8,15 +8,9 @@
 		int id = Integer.parseInt(sid);
 		BoardVO u = new BoardVO();
 
-//		String filename = u.getPhotoFilename(id);
-//		if(filename != null)
-//			FileUpload.deleteFile(request, filename);
-
 		u.setSeq(id);
 		BoardDAO boardDAO = new BoardDAO();
-//		String filename = memberDAO.getPhotoFilename(id);
-//		if(filename != null)
-//			FileUpload.deleteFile(request, filename);
+
 		boardDAO.deleteBoard(u);
 	}
 	response.sendRedirect("posts.jsp");

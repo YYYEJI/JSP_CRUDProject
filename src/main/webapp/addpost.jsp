@@ -19,6 +19,9 @@
 
 	BoardVO i = fileUpload.uploadPhoto(request);
 
+
+
+
 	int sucess = boardDAO.insertBoard(i);
 
 	String msg = "데이터 추가 성공 !";
