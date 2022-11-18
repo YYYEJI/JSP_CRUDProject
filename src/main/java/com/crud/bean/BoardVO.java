@@ -4,12 +4,40 @@ import java.util.Date;
 
 public class BoardVO {
     private int seq;
+
+    private String category;
     private String title;
+
+    @Override
+    public String toString() {
+        return "BoardVO{" +
+                "seq=" + seq +
+                ", category='" + category + '\'' +
+                ", title='" + title + '\'' +
+                ", writer='" + writer + '\'' +
+                ", content='" + content + '\'' +
+                ", regdate=" + regdate +
+                ", photo='" + photo + '\'' +
+                ", cnt=" + cnt +
+                '}';
+    }
+
     private String writer;
     private String content;
     private Date regdate;
+
+
+
+    private String photo;
     private int cnt;
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
     public int getSeq() {
         return seq;
     }
@@ -46,4 +74,12 @@ public class BoardVO {
     public void setCnt(int cnt) {
         this.cnt = cnt;
     }
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
 }
